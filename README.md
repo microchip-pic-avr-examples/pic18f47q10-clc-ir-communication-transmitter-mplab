@@ -7,25 +7,31 @@
   
 Many real time control applications use infrared (commonly referred to as IR) wireless technology, as a communication mode. IR communication has the merits of consuming low power and is very cost effective.The IR communication is used in numerous control applications involving transmission of information and commands to control different house-hold appliances. Some commonly used home appliances which involve IR communication are the remote controls for television and air conditioners etc. There are various standard IR protocols in use such as S-link, RECS-80, RC-5, RC-6 and NEC. But the most commonly used protocol is NEC IR transmission protocol.
 
+### To see the IR Communication transmitter and receiver demo operation video, click on the below image.
+
+<p align="center">
+<br><a href="https://youtu.be/zXW9ZzpTEMU" rel="nofollow"><img src="images/grayCodeDecoder-frontImage.png" alt="PIC Q10" width="500"/></a>
+</p>
+
 ## Useful Links
 
 - [PIC18F47Q10 Product Page](https://www.microchip.com/wwwproducts/en/PIC18F47Q10 "PIC18F47Q10 Product Page")
 - [PIC18F47Q10 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=PIC18F47Q10&type=&language= "PIC18F47Q10 Code Examples on GitHub")
-- [Using CLC in Real Time Applications](http://ww1.microchip.com/downloads/en/AppNotes/AN2912-Using-CLCs-in-Real-Time-Apps_00002912A.pdf "Using CLC in Real Time Applications")
-- [Configurable Logic Cells Tips 'n' Tricks](http://ww1.microchip.com/downloads/en/devicedoc/41631b.pdf "Configurable Logic Cells Tips 'n' Tricks")
+- [IR Communication using Core Independent peripherals:IR Receiver-GitHub link](https://github.com/microchip-pic-avr-examples/pic18f47q10-clc-ir-communication-receiver-mplab.git "IR Communication using Core Independent peripherals:IR Receiver-GitHub link")
+- [DC Motor control with Touch Interface and IR communication-Application note](http://ww1.microchip.com/downloads/en/AppNotes/AN2933-DC-Motor-Control-with-Touch-Interface-and-IR00002933A.pdf "DC Motor control with Touch Interface and IR communication-Application note")
 
 
 ## IR communication demo application
 
-This demo example explains how to implement IR communication seamlessly using Core Independent Peripherals (CIPs) of PIC18 Q10 microcontroller(MCU). In this demo, NEC Infrared transmission protocol is used for data encoding. The IR transmitter comprises of Configurable Logic Cells (CLCs), Pulse Width Modulator (PWM) and Data Signal Modulator (DSM) peripherals of PIC18 Q10 MCU, useful to prepare modulated data frame. The IR receiver comprises of Capture, Compare and PWM (CCP) module along with Timer 1 and Timer2(HLT) peripherals of PIC18F Q10 MCU, useful to decode the received data frame. The IR communication demo application consists of a transmitter and receiver units. These units are made up of Curiosity HPC boards from Microchip, IR Click and LCD mini click boards from MikroElekronika.
+This demo example explains how to implement IR communication seamlessly using Core Independent Peripherals (CIPs) of PIC18 Q10 microcontroller(MCU). In this demo, NEC Infrared transmission protocol is used for data encoding. The IR transmitter comprises of Configurable Logic Cells (CLCs), Pulse Width Modulator (PWM) and Data Signal Modulator (DSM) peripherals of PIC18 Q10 MCU, useful to prepare modulated data frame. The IR receiver comprises of Capture, Compare and PWM (CCP) module along with Timer 1 and Timer2(HLT) peripherals of PIC18F Q10 MCU, useful to decode the received data frame. The IR communication demo application consists of a transmitter and receiver units. These units are made up of Curiosity Nano Base for click boards from Microchip, IR Click and LCD mini click boards from MikroElekronika.
 
 ## IR Transmitter
 
-The IR transmitter unit is realized using the existing evaluation boards; Curiosity HPC development board from Microchip and IR click board from MikroElekronika. The two push buttons or switches S1 and S2 on Curiosity HPC development board are used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count i.e. from 1 to 8. If switch S2 is pressed, command is transmitted as switch press count plus 0x80 i.e. from 0x81 to 0x88. After count 8 the commands are repeated i.e. command 1 to 8 for S1 and command 0x81 to 0x88 for S2.
+The IR transmitter unit is realized using the existing evaluation boards; Curiosity Nano Base for click boards and PIC18F47Q10 Curiosity Nano board from Microchip and IR click board from MikroElekronika. The push button or switche S1 on PIC18F47Q10 Curiosity Nano board are used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count i.e. from 1 to 8. After count 8 the commands are repeated i.e. command 1 to 8 for S1.
 
 <p align="center">
   <img width=auto height=auto src="images/blockdiagram.png">
-  <br>Fig 1: Gray-code decoder setup <br>
+  <br>Figure 1: IR Transmitter <br>
 </p> 
 
 Following steps are followed for transmitting a command.
@@ -105,8 +111,20 @@ Following steps are followed for transmitting a command.
 
 The PWM3 peripheral along with Timer 2 is used for generating the 38 KHz carrier signal. Whenever the modulating signal is high, the 38 kHz output of the PWM3 module connected to the carrier high signal of a DSM is routed to the DSM output. Whenever the modulating signal is low, the carrier low signal of DSM module is routed to the DSM output. Since the PWM4 module is configured as 0% duty to give equivalent signal as ground, the carrier low signal generates logic low output. The modulated signal from the DSM module output is fed to the IR click’s IR LED for transmitting a command.  
 
-## Software Tools
+## Software  Tools
 
+- [MPLAB X IDE v5.40](https://www.microchip.com/mplab/mplab-x-ide "MPLAB X IDE v5.40")
+- [XC8 Compiler v2.30](https://www.microchip.com/mplab/compilers "XC8 Compiler v2.20")
+- [MPLAB Code Configurator Core version 4.85](https://www.microchip.com/mplab/mplab-code-configurator "MPLAB Code Configurator Core version 4.85")
+- [PIC18F-Q_DFP v1.8.154](https://packs.download.microchip.com/ "PIC18F-Q_DFP v1.8.154")
+
+***Note: For running the demo, the installed tool versions should be the same or later. This example is not tested with the previous versions.***
+
+## Hardware used
+
+- [PIC18F47Q10 Curiosity Nano](https://www.microchip.com/Developmenttools/ProductDetails/DM182029 "PIC18F47Q10 Curiosity Nano")
+- [Curiosity Nano Base for Click boards](https://www.microchip.com/developmenttools/ProductDetails/AC164162 "Curiosity Nano Base for Click boards")
+- [IR click]( https://www.mikroe.com/ir-click "IR click")
 
 ## MCC settings
 
@@ -196,12 +214,12 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 * Other port pins used in the application are discribed in the below table.
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
+  <img width=auto height=auto src="images/.png">
   <br>Table 1: Port pin mapping IR Transmitter <br>
 </p>
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
+  <img width=auto height=auto src="images/.png">
   <br>Fig 14: Demo Set up Touch interface with IR TX <br>
 </p>
 
