@@ -38,11 +38,11 @@ Following steps are followed for transmitting a command.
 
 #### Event Detection:
 
-* To detect the switch press and release event on curiosity HPC board Timer 6 (for SW S1) and Timer 4 (for SW S2) are used and configured in monostable mode. Switches S1 and S2 are used as timer’s external reset source to start the timer. Upon Switch press or release event timers will start automatically. Timer’s period is set as 10 ms, to implement the switch de-bounce mechanism. The timer post-scaler is set as 1:2 to generate interrupt after switch press and release events
+* To detect the switch press and release event on pic18f47q10 curiosity nano board, and Timer 4 (for SW S1) are used and configured in monostable mode. Switches S1 is used as timer’s external reset source to start the timer. Upon Switch press or release event timers will start automatically. Timer’s period is set as 10 ms, to implement the switch de-bounce mechanism. The timer post-scaler is set as 1:2 to generate interrupt after switch press and release events
 
 #### Command generation from switch press and release event:
 
-* From the switch S1 or S2 press and release event, generate one byte of command to be transmitted (0x1 to 0x8 or 0x81 to 0x88).
+* From the switch S1 press and release event, generate one byte of command to be transmitted (0x1 to 0x8).
 * Reverse the bits in the command byte so that least significant bit (LSB) will be transmitted first as per NEC protocol.
 * Take the address of the receiver (e.g. 0x00) and reverse the bits for transmitting LSB first.
 * Generate a 32-bit data value (address, inverse of address, command, inverse of command) for transmission.
@@ -210,7 +210,7 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 ## IR Transmitter
 
-* Connect IR Click board in mikroBUS™ slot 2 of the Curiosity HPC board.
+* Connect IR Click board in mikroBUS™ slot 2 of the Curiosity Nano Base for click boards.
 * Other port pins used in the application are discribed in the below table.
 
 <p align="center">
