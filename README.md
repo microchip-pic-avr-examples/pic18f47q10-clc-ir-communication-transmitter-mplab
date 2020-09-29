@@ -119,17 +119,17 @@ In the demo firmware the High-Frequency Internal Oscillator (HFINTOSC) is used t
 ## System Module
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
+  <img width=auto height=auto src="images/clock.png">
   <br>Fig 4: System Clock Configuration <br>
 </p>
 
-## Timer 4 and Timer 6
+## Timer 4 
 
-Timer 4 and Timer 6 are configured in monostable mode to detect switch press and release events of switches S1 or S2 respectively. Switch S1 is used as timer reset source to start the Timer 6. And Switch S2 is used as timer reset source to start the Timer 4. Timer 4 and Timer 6 configuration is shown in the figure 5.
+Timer 4 is configured in monostable mode to detect switch press and release event of switche S1 respectively. Switch S1 is used as timer reset source to start the Timer 4 as shown in the figure 5.
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
-  <br>Fig 5: Timer 4 and Timer 6 configuration <br>
+  <img width=auto height=auto src="images/timer4.png">
+  <br>Fig 5: Timer 4 configuration <br>
 </p>
 
 ## CLC
@@ -137,27 +137,27 @@ Timer 4 and Timer 6 are configured in monostable mode to detect switch press and
 CLC1, CLC2, CLC3 and CLC4 are configured together for generating and transmitting the IR data bit as logic 1. CLC5 is configured for generating and transmitting the IR data bit as logic 0. The CLCs are configured as shown in figures 6,7,8,9,10.
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
+  <img width=auto height=auto src="images/clc1.png">
   <br>Fig 6: CLC1 Configuration <br>
 </p>
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
+  <img width=auto height=auto src="images/clc2.png">
   <br>Fig 7: CLC2 Configuration <br>
 </p>
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
+  <img width=auto height=auto src="images/clc3.png">
   <br>Fig 8: CLC3 Configuration <br>
 </p>
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
+  <img width=auto height=auto src="images/clc4.png">
   <br>Fig 9: CLC4 Configuration <br>
 </p>
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
+  <img width=auto height=auto src="images/clc5.png">
   <br>Fig 10: CLC5 Configuration <br>
 </p>
 
@@ -166,7 +166,7 @@ CLC1, CLC2, CLC3 and CLC4 are configured together for generating and transmittin
 The PWM3 peripheral along with the Timer 2 is used for generating 38 KHz carrier signal. The Timer 2 configuration in shown in figure 11.
 
 <p align="center">
-  <img width=auto height=auto src="images/blockdiagram.png">
+  <img width=auto height=auto src="images/timer2.png">
   <br>Fig 6: CLC1 Configuration <br>
 </p>
 
