@@ -3,11 +3,11 @@
     "category": "com.microchip.ide.project",
     "content": {
         "metaDataVersion": "1.1.0",
-        "name": "com.microchip.mcu8.mplabx.project.pic18f47q10-clc-ir-commuication-transmitter-mplab",
+        "name": "com.microchip.mcu8.mplabx.project.pic18f47q10-clc-ir-communication-transmitter-mplab",
         "version": "1.0.0",
-        "displayName": "CLC IR communication Transmitter",
-        "projectName": "pic18f47q10-clc-ir-commuication-transmitter-mplab",
-        "shortDescription": "This demo is realized using PIC18 Q10 family MCU and Curiosity Nano development board. The demo highlights the usage of CIPs for IR communication implementation in real time control applications. This code example contains IR transmitter implementation details.",
+        "displayName": "CLC IR Communication Transmitter",
+        "projectName": "pic18f47q10-clc-ir-communication-transmitter-mplab",
+        "shortDescription": "This demo is realized using PIC18-Q10 family MCU and Curiosity Nano development board. The demo highlights the usage of CIPs for IR communication implementation in real time control applications. This code example contains IR transmitter implementation details.",
         "ide": {
             "name": "MPLAB X IDE",
             "semverRange": ">=5.40.0"
@@ -24,7 +24,7 @@
         },
         "configurator": {
             "name": "MCC",
-            "semverRange": ">=3.95.0"
+            "semverRange": ">=4.0.1"
         },
         "device": {
             "metaDataVersion": "1.0.0",
