@@ -231,4 +231,4 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 ## Demo operation
 
-To complete the demo please visit IR Receiver xpress code example [IR Communication using Core Independent peripherals:IR Receiver-GitHub link](https://github.com/microchip-pic-avr-examples/pic18f47q10-clc-ir-communication-receiver-mplab.git "IR Communication using Core Independent peripherals:IR Receiver-GitHub link")
+To complete the demo please visit IR Receiver code example [IR Communication using Core Independent peripherals:IR Receiver-GitHub link](https://github.com/microchip-pic-avr-examples/pic18f47q10-clc-ir-communication-receiver-mplab.git "IR Communication using Core Independent peripherals:IR Receiver-GitHub link")
