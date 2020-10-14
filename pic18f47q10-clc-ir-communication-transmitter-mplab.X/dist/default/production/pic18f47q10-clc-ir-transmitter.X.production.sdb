@@ -1,0 +1,1277 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F47Q10 ]
+[d frameptr 4065 ]
+"88 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr2.c
+[e E12678 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+]
+"94
+[e E12695 . `uc
+TMR2_T2INPPS 0
+TMR2_RESERVED 1
+TMR2_T4POSTSCALED 2
+TMR2_T6POSTSCALED 3
+TMR2_CCP1_OUT 4
+TMR2_CCP2_OUT 5
+TMR2_PWM3_OUT 6
+TMR2_PWM4_OUT 7
+TMR2_CMP1_OUT 8
+TMR2_CMP2_OUT 9
+TMR2_ZCD_OUTPUT 10
+TMR2_RESERVED_2 11
+TMR2_UART1_RX_EDGE 12
+TMR2_UART1_TX_EDGE 13
+TMR2_UART2_RX_EDGE 14
+TMR2_UART2_TX_EDGE 15
+TMR2_CLC1_OUT 16
+TMR2_CLC2_OUT 17
+TMR2_CLC3_OUT 18
+TMR2_CLC4_OUT 19
+TMR2_CLC5_OUT 20
+TMR2_CLC6_OUT 21
+TMR2_CLC7_OUT 22
+TMR2_CLC8_OUT 23
+TMR2_RESERVED_3 24
+]
+"99 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr4.c
+[e E12678 . `uc
+TMR4_ROP_STARTS_TMRON 0
+TMR4_ROP_STARTS_TMRON_ERSHIGH 1
+TMR4_ROP_STARTS_TMRON_ERSLOW 2
+TMR4_ROP_RESETS_ERSBOTHEDGE 3
+TMR4_ROP_RESETS_ERSRISINGEDGE 4
+TMR4_ROP_RESETS_ERSFALLINGEDGE 5
+TMR4_ROP_RESETS_ERSLOW 6
+TMR4_ROP_RESETS_ERSHIGH 7
+TMR4_OS_STARTS_TMRON 8
+TMR4_OS_STARTS_ERSRISINGEDGE 9
+TMR4_OS_STARTS_ERSFALLINGEDGE 10
+TMR4_OS_STARTS_ERSBOTHEDGE 11
+TMR4_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR4_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR4_OS_STARTS_ERSRISINGEDGEDETECT 14
+]
+"105
+[e E12695 . `uc
+TMR4_T4INPPS 0
+TMR4_T2POSTSCALED 1
+TMR4_RESERVED 2
+TMR4_T6POSTSCALED 3
+TMR4_CCP1_OUT 4
+TMR4_CCP2_OUT 5
+TMR4_PWM3_OUT 6
+TMR4_PWM4_OUT 7
+TMR4_CMP1_OUT 8
+TMR4_CMP2_OUT 9
+TMR4_ZCD_OUTPUT 10
+TMR4_RESERVED_2 11
+TMR4_UART1_RX_EDGE 12
+TMR4_UART1_TX_EDGE 13
+TMR4_UART2_RX_EDGE 14
+TMR4_UART2_TX_EDGE 15
+TMR4_CLC1_OUT 16
+TMR4_CLC2_OUT 17
+TMR4_CLC3_OUT 18
+TMR4_CLC4_OUT 19
+TMR4_CLC5_OUT 20
+TMR4_CLC6_OUT 21
+TMR4_CLC7_OUT 22
+TMR4_CLC8_OUT 23
+TMR4_RESERVED_3 24
+]
+"188
+[e E12775 . `uc
+NO_KEY 0
+SW1 1
+MAX_KEYS 2
+]
+[e E12769 . `uc
+KEY_NO_ACTION 0
+KEY_PRESSED 1
+KEY_RELEASED 2
+MAX_KEY_STATE 3
+]
+"14 D:\New folder\pic18f47q10-clc-ir-transmitter.X\application.c
+[e E12898 . `uc
+NO_KEY 0
+SW1 1
+MAX_KEYS 2
+]
+[e E12892 . `uc
+KEY_NO_ACTION 0
+KEY_PRESSED 1
+KEY_RELEASED 2
+MAX_KEY_STATE 3
+]
+"38
+[e E12881 . `uc
+GET_EVENT 0
+PREPARE_CMD 1
+PREPARE_IR_NEC_DATA 2
+SEND_DATA_OVER_IR 3
+COMM_ERR 4
+]
+"102
+[e E12888 . `uc
+ERROR 255
+SUCCESS 1
+]
+"219
+[e E12872 . `uc
+START_TMR0 0
+START_BIT_MARK 1
+START_BIT_SPACE 2
+LOGIC_1 3
+LOGIC_0 4
+STOP_BIT 5
+STOP_FRAME 6
+]
+"37
+[v _ApplicationTask ApplicationTask `(v  1 e 1 0 ]
+"133
+[v _Reverse Reverse `(uc  1 s 1 Reverse ]
+"151
+[v _PrepareNewCMD PrepareNewCMD `(uc  1 s 1 PrepareNewCMD ]
+"182
+[v _Prepare_IR_NEC_Data Prepare_IR_NEC_Data `(ul  1 s 4 Prepare_IR_NEC_Data ]
+"217
+[v _SendIR_Frame SendIR_Frame `(E12888  1 s 1 SendIR_Frame ]
+"371
+[v _GetEvent GetEvent `(E12892  1 s 1 GetEvent ]
+"388
+[v _ClearEvent ClearEvent `(v  1 s 1 ClearEvent ]
+"403
+[v _GetButton GetButton `(E12898  1 s 1 GetButton ]
+"419
+[v _ClearButton ClearButton `(v  1 s 1 ClearButton ]
+"432
+[v _TMR0_UserInterruptHandler TMR0_UserInterruptHandler `(v  1 e 1 0 ]
+"445
+[v _TMR4_UserInterruptHandler TMR4_UserInterruptHandler `(v  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"51 D:\New folder\pic18f47q10-clc-ir-transmitter.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"61 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc1.c
+[v _CLC1_Initialize CLC1_Initialize `(v  1 e 1 0 ]
+"92
+[v _CLC1_ISR CLC1_ISR `(v  1 e 1 0 ]
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc2.c
+[v _CLC2_Initialize CLC2_Initialize `(v  1 e 1 0 ]
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc3.c
+[v _CLC3_Initialize CLC3_Initialize `(v  1 e 1 0 ]
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc4.c
+[v _CLC4_Initialize CLC4_Initialize `(v  1 e 1 0 ]
+"60 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc5.c
+[v _CLC5_Initialize CLC5_Initialize `(v  1 e 1 0 ]
+"91
+[v _CLC5_ISR CLC5_ISR `(v  1 e 1 0 ]
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/dsm.c
+[v _DSM_Initialize DSM_Initialize `(v  1 e 1 0 ]
+"90
+[v _DSM_ManualModulationSet DSM_ManualModulationSet `(v  1 e 1 0 ]
+"96
+[v _DSM_ManualModulationClear DSM_ManualModulationClear `(v  1 e 1 0 ]
+"108
+[v _DSM_ModulationStart DSM_ModulationStart `(v  1 e 1 0 ]
+"114
+[v _DSM_ModulationStop DSM_ModulationStop `(v  1 e 1 0 ]
+"52 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"58
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+"50 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"71
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"85
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/pwm4.c
+[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
+"62 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"88
+[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
+"94
+[v _TMR0_StopTimer TMR0_StopTimer `(v  1 e 1 0 ]
+"110
+[v _TMR0_WriteTimer TMR0_WriteTimer `(v  1 e 1 0 ]
+"122
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"135
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"139
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"62 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"100
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"111
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"122
+[v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
+"136
+[v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
+"147
+[v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
+"67 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr4.c
+[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
+"111
+[v _TMR4_Start TMR4_Start `(v  1 e 1 0 ]
+"122
+[v _TMR4_Stop TMR4_Stop `(v  1 e 1 0 ]
+"133
+[v _TMR4_Counter8BitGet TMR4_Counter8BitGet `(uc  1 e 1 0 ]
+"147
+[v _TMR4_Counter8BitSet TMR4_Counter8BitSet `(v  1 e 1 0 ]
+"158
+[v _TMR4_Period8BitSet TMR4_Period8BitSet `(v  1 e 1 0 ]
+"168
+[v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
+"181
+[v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
+"185
+[v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
+[s S1196 . 2 `E12775 1 key 1 0 `E12769 1 keyStatus 1 1 ]
+"14 D:\New folder\pic18f47q10-clc-ir-transmitter.X\application.c
+[v _event event `S1196  1 e 2 0 ]
+"53 C:/Users/I51005/.mchp_packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f47q10.h
+[v _CLCIN0PPS CLCIN0PPS `VEuc  1 e 1 @3615 ]
+"581
+[v _CLC1CON CLC1CON `VEuc  1 e 1 @3623 ]
+[s S369 . 1 `uc 1 MODE 1 0 :3:0 
+`uc 1 INTN 1 0 :1:3 
+`uc 1 INTP 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"614
+[s S376 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+]
+[s S380 . 1 `uc 1 LC1MODE 1 0 :3:0 
+`uc 1 LC1INTN 1 0 :1:3 
+`uc 1 LC1INTP 1 0 :1:4 
+`uc 1 LC1OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 LC1EN 1 0 :1:7 
+]
+[s S387 . 1 `uc 1 LC1MODE0 1 0 :1:0 
+`uc 1 LC1MODE1 1 0 :1:1 
+`uc 1 LC1MODE2 1 0 :1:2 
+]
+[u S391 . 1 `S369 1 . 1 0 `S376 1 . 1 0 `S380 1 . 1 0 `S387 1 . 1 0 ]
+[v _CLC1CONbits CLC1CONbits `VES391  1 e 1 @3623 ]
+"699
+[v _CLC1POL CLC1POL `VEuc  1 e 1 @3624 ]
+[s S1854 . 1 `uc 1 G1POL 1 0 :1:0 
+`uc 1 G2POL 1 0 :1:1 
+`uc 1 G3POL 1 0 :1:2 
+`uc 1 G4POL 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 POL 1 0 :1:7 
+]
+"722
+[s S1861 . 1 `uc 1 LC1G1POL 1 0 :1:0 
+`uc 1 LC1G2POL 1 0 :1:1 
+`uc 1 LC1G3POL 1 0 :1:2 
+`uc 1 LC1G4POL 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 LC1POL 1 0 :1:7 
+]
+[u S1868 . 1 `S1854 1 . 1 0 `S1861 1 . 1 0 ]
+[v _CLC1POLbits CLC1POLbits `VES1868  1 e 1 @3624 ]
+"777
+[v _CLC1SEL0 CLC1SEL0 `VEuc  1 e 1 @3625 ]
+"905
+[v _CLC1SEL1 CLC1SEL1 `VEuc  1 e 1 @3626 ]
+"1033
+[v _CLC1SEL2 CLC1SEL2 `VEuc  1 e 1 @3627 ]
+"1161
+[v _CLC1SEL3 CLC1SEL3 `VEuc  1 e 1 @3628 ]
+"1289
+[v _CLC1GLS0 CLC1GLS0 `VEuc  1 e 1 @3629 ]
+"1401
+[v _CLC1GLS1 CLC1GLS1 `VEuc  1 e 1 @3630 ]
+"1513
+[v _CLC1GLS2 CLC1GLS2 `VEuc  1 e 1 @3631 ]
+"1625
+[v _CLC1GLS3 CLC1GLS3 `VEuc  1 e 1 @3632 ]
+"1737
+[v _CLC2CON CLC2CON `VEuc  1 e 1 @3633 ]
+"1770
+[s S451 . 1 `uc 1 LC2MODE 1 0 :3:0 
+`uc 1 LC2INTN 1 0 :1:3 
+`uc 1 LC2INTP 1 0 :1:4 
+`uc 1 LC2OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 LC2EN 1 0 :1:7 
+]
+[s S458 . 1 `uc 1 LC2MODE0 1 0 :1:0 
+`uc 1 LC2MODE1 1 0 :1:1 
+`uc 1 LC2MODE2 1 0 :1:2 
+]
+[u S462 . 1 `S369 1 . 1 0 `S376 1 . 1 0 `S451 1 . 1 0 `S458 1 . 1 0 ]
+[v _CLC2CONbits CLC2CONbits `VES462  1 e 1 @3633 ]
+"1855
+[v _CLC2POL CLC2POL `VEuc  1 e 1 @3634 ]
+"1878
+[s S1893 . 1 `uc 1 LC2G1POL 1 0 :1:0 
+`uc 1 LC2G2POL 1 0 :1:1 
+`uc 1 LC2G3POL 1 0 :1:2 
+`uc 1 LC2G4POL 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 LC2POL 1 0 :1:7 
+]
+[u S1900 . 1 `S1854 1 . 1 0 `S1893 1 . 1 0 ]
+[v _CLC2POLbits CLC2POLbits `VES1900  1 e 1 @3634 ]
+"1933
+[v _CLC2SEL0 CLC2SEL0 `VEuc  1 e 1 @3635 ]
+"2061
+[v _CLC2SEL1 CLC2SEL1 `VEuc  1 e 1 @3636 ]
+"2189
+[v _CLC2SEL2 CLC2SEL2 `VEuc  1 e 1 @3637 ]
+"2317
+[v _CLC2SEL3 CLC2SEL3 `VEuc  1 e 1 @3638 ]
+"2445
+[v _CLC2GLS0 CLC2GLS0 `VEuc  1 e 1 @3639 ]
+"2557
+[v _CLC2GLS1 CLC2GLS1 `VEuc  1 e 1 @3640 ]
+"2669
+[v _CLC2GLS2 CLC2GLS2 `VEuc  1 e 1 @3641 ]
+"2781
+[v _CLC2GLS3 CLC2GLS3 `VEuc  1 e 1 @3642 ]
+"2893
+[v _CLC3CON CLC3CON `VEuc  1 e 1 @3643 ]
+"2926
+[s S519 . 1 `uc 1 LC3MODE 1 0 :3:0 
+`uc 1 LC3INTN 1 0 :1:3 
+`uc 1 LC3INTP 1 0 :1:4 
+`uc 1 LC3OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 LC3EN 1 0 :1:7 
+]
+[s S526 . 1 `uc 1 LC3MODE0 1 0 :1:0 
+`uc 1 LC3MODE1 1 0 :1:1 
+`uc 1 LC3MODE2 1 0 :1:2 
+]
+[u S530 . 1 `S369 1 . 1 0 `S376 1 . 1 0 `S519 1 . 1 0 `S526 1 . 1 0 ]
+[v _CLC3CONbits CLC3CONbits `VES530  1 e 1 @3643 ]
+"3011
+[v _CLC3POL CLC3POL `VEuc  1 e 1 @3644 ]
+"3034
+[s S1925 . 1 `uc 1 LC3G1POL 1 0 :1:0 
+`uc 1 LC3G2POL 1 0 :1:1 
+`uc 1 LC3G3POL 1 0 :1:2 
+`uc 1 LC3G4POL 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 LC3POL 1 0 :1:7 
+]
+[u S1932 . 1 `S1854 1 . 1 0 `S1925 1 . 1 0 ]
+[v _CLC3POLbits CLC3POLbits `VES1932  1 e 1 @3644 ]
+"3089
+[v _CLC3SEL0 CLC3SEL0 `VEuc  1 e 1 @3645 ]
+"3217
+[v _CLC3SEL1 CLC3SEL1 `VEuc  1 e 1 @3646 ]
+"3345
+[v _CLC3SEL2 CLC3SEL2 `VEuc  1 e 1 @3647 ]
+"3473
+[v _CLC3SEL3 CLC3SEL3 `VEuc  1 e 1 @3648 ]
+"3601
+[v _CLC3GLS0 CLC3GLS0 `VEuc  1 e 1 @3649 ]
+"3713
+[v _CLC3GLS1 CLC3GLS1 `VEuc  1 e 1 @3650 ]
+"3825
+[v _CLC3GLS2 CLC3GLS2 `VEuc  1 e 1 @3651 ]
+"3937
+[v _CLC3GLS3 CLC3GLS3 `VEuc  1 e 1 @3652 ]
+"4049
+[v _CLC4CON CLC4CON `VEuc  1 e 1 @3653 ]
+"4082
+[s S587 . 1 `uc 1 LC4MODE 1 0 :3:0 
+`uc 1 LC4INTN 1 0 :1:3 
+`uc 1 LC4INTP 1 0 :1:4 
+`uc 1 LC4OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 LC4EN 1 0 :1:7 
+]
+[s S594 . 1 `uc 1 LC4MODE0 1 0 :1:0 
+`uc 1 LC4MODE1 1 0 :1:1 
+`uc 1 LC4MODE2 1 0 :1:2 
+]
+[u S598 . 1 `S369 1 . 1 0 `S376 1 . 1 0 `S587 1 . 1 0 `S594 1 . 1 0 ]
+[v _CLC4CONbits CLC4CONbits `VES598  1 e 1 @3653 ]
+"4167
+[v _CLC4POL CLC4POL `VEuc  1 e 1 @3654 ]
+"4245
+[v _CLC4SEL0 CLC4SEL0 `VEuc  1 e 1 @3655 ]
+"4373
+[v _CLC4SEL1 CLC4SEL1 `VEuc  1 e 1 @3656 ]
+"4501
+[v _CLC4SEL2 CLC4SEL2 `VEuc  1 e 1 @3657 ]
+"4629
+[v _CLC4SEL3 CLC4SEL3 `VEuc  1 e 1 @3658 ]
+"4757
+[v _CLC4GLS0 CLC4GLS0 `VEuc  1 e 1 @3659 ]
+"4869
+[v _CLC4GLS1 CLC4GLS1 `VEuc  1 e 1 @3660 ]
+"4981
+[v _CLC4GLS2 CLC4GLS2 `VEuc  1 e 1 @3661 ]
+"5093
+[v _CLC4GLS3 CLC4GLS3 `VEuc  1 e 1 @3662 ]
+"5205
+[v _CLC5CON CLC5CON `VEuc  1 e 1 @3663 ]
+"5238
+[s S1355 . 1 `uc 1 LC5MODE 1 0 :3:0 
+`uc 1 LC5INTN 1 0 :1:3 
+`uc 1 LC5INTP 1 0 :1:4 
+`uc 1 LC5OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 LC5EN 1 0 :1:7 
+]
+[s S1362 . 1 `uc 1 LC5MODE0 1 0 :1:0 
+`uc 1 LC5MODE1 1 0 :1:1 
+`uc 1 LC5MODE2 1 0 :1:2 
+]
+[u S1366 . 1 `S369 1 . 1 0 `S376 1 . 1 0 `S1355 1 . 1 0 `S1362 1 . 1 0 ]
+[v _CLC5CONbits CLC5CONbits `VES1366  1 e 1 @3663 ]
+"5323
+[v _CLC5POL CLC5POL `VEuc  1 e 1 @3664 ]
+"5401
+[v _CLC5SEL0 CLC5SEL0 `VEuc  1 e 1 @3665 ]
+"5529
+[v _CLC5SEL1 CLC5SEL1 `VEuc  1 e 1 @3666 ]
+"5657
+[v _CLC5SEL2 CLC5SEL2 `VEuc  1 e 1 @3667 ]
+"5785
+[v _CLC5SEL3 CLC5SEL3 `VEuc  1 e 1 @3668 ]
+"5913
+[v _CLC5GLS0 CLC5GLS0 `VEuc  1 e 1 @3669 ]
+"6025
+[v _CLC5GLS1 CLC5GLS1 `VEuc  1 e 1 @3670 ]
+"6137
+[v _CLC5GLS2 CLC5GLS2 `VEuc  1 e 1 @3671 ]
+"6249
+[v _CLC5GLS3 CLC5GLS3 `VEuc  1 e 1 @3672 ]
+"12719
+[v _T4INPPS T4INPPS `VEuc  1 e 1 @3751 ]
+[s S101 . 1 `uc 1 INT0IE 1 0 :1:0 
+`uc 1 INT1IE 1 0 :1:1 
+`uc 1 INT2IE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"15231
+[u S108 . 1 `S101 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES108  1 e 1 @3773 ]
+[s S227 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 TMR3IE 1 0 :1:2 
+`uc 1 TMR4IE 1 0 :1:3 
+`uc 1 TMR5IE 1 0 :1:4 
+`uc 1 TMR6IE 1 0 :1:5 
+]
+"15443
+[u S234 . 1 `S227 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES234  1 e 1 @3777 ]
+[s S181 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+`uc 1 TMR3GIE 1 0 :1:1 
+`uc 1 TMR5GIE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CLC1IE 1 0 :1:4 
+`uc 1 CLC2IE 1 0 :1:5 
+`uc 1 CLC3IE 1 0 :1:6 
+`uc 1 CLC4IE 1 0 :1:7 
+]
+"15495
+[u S190 . 1 `S181 1 . 1 0 ]
+[v _PIE5bits PIE5bits `VES190  1 e 1 @3778 ]
+[s S139 . 1 `uc 1 CCP1IE 1 0 :1:0 
+`uc 1 CCP2IE 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 CLC5IE 1 0 :1:4 
+`uc 1 CLC6IE 1 0 :1:5 
+`uc 1 CLC7IE 1 0 :1:6 
+`uc 1 CLC8IE 1 0 :1:7 
+]
+"15551
+[u S147 . 1 `S139 1 . 1 0 ]
+[v _PIE6bits PIE6bits `VES147  1 e 1 @3779 ]
+[s S118 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 INT1IF 1 0 :1:1 
+`uc 1 INT2IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"15648
+[u S125 . 1 `S118 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES125  1 e 1 @3781 ]
+[s S244 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR3IF 1 0 :1:2 
+`uc 1 TMR4IF 1 0 :1:3 
+`uc 1 TMR5IF 1 0 :1:4 
+`uc 1 TMR6IF 1 0 :1:5 
+]
+"15860
+[u S251 . 1 `S244 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES251  1 e 1 @3785 ]
+[s S202 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+`uc 1 TMR3GIF 1 0 :1:1 
+`uc 1 TMR5GIF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CLC1IF 1 0 :1:4 
+`uc 1 CLC2IF 1 0 :1:5 
+`uc 1 CLC3IF 1 0 :1:6 
+`uc 1 CLC4IF 1 0 :1:7 
+]
+"15912
+[u S211 . 1 `S202 1 . 1 0 ]
+[v _PIR5bits PIR5bits `VES211  1 e 1 @3786 ]
+[s S158 . 1 `uc 1 CCP1IF 1 0 :1:0 
+`uc 1 CCP2IF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 CLC5IF 1 0 :1:4 
+`uc 1 CLC6IF 1 0 :1:5 
+`uc 1 CLC7IF 1 0 :1:6 
+`uc 1 CLC8IF 1 0 :1:7 
+]
+"15968
+[u S166 . 1 `S158 1 . 1 0 ]
+[v _PIR6bits PIR6bits `VES166  1 e 1 @3787 ]
+"16628
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @3795 ]
+"16768
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @3797 ]
+"16920
+[v _OSCEN OSCEN `VEuc  1 e 1 @3799 ]
+"16971
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3800 ]
+"17029
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @3801 ]
+"17200
+[v _PMD0 PMD0 `VEuc  1 e 1 @3804 ]
+"17277
+[v _PMD1 PMD1 `VEuc  1 e 1 @3805 ]
+"17341
+[v _PMD2 PMD2 `VEuc  1 e 1 @3806 ]
+"17386
+[v _PMD3 PMD3 `VEuc  1 e 1 @3807 ]
+"17448
+[v _PMD4 PMD4 `VEuc  1 e 1 @3808 ]
+"17501
+[v _PMD5 PMD5 `VEuc  1 e 1 @3809 ]
+"17678
+[v _RA3PPS RA3PPS `VEuc  1 e 1 @3813 ]
+"19272
+[v _INLVLA INLVLA `VEuc  1 e 1 @3848 ]
+"19334
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @3849 ]
+"19396
+[v _ODCONA ODCONA `VEuc  1 e 1 @3850 ]
+"19458
+[v _WPUA WPUA `VEuc  1 e 1 @3851 ]
+"19520
+[v _ANSELA ANSELA `VEuc  1 e 1 @3852 ]
+"19768
+[v _INLVLB INLVLB `VEuc  1 e 1 @3856 ]
+"19830
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @3857 ]
+"19892
+[v _ODCONB ODCONB `VEuc  1 e 1 @3858 ]
+"19954
+[v _WPUB WPUB `VEuc  1 e 1 @3859 ]
+"20016
+[v _ANSELB ANSELB `VEuc  1 e 1 @3860 ]
+"20264
+[v _INLVLC INLVLC `VEuc  1 e 1 @3864 ]
+"20326
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @3865 ]
+"20388
+[v _ODCONC ODCONC `VEuc  1 e 1 @3866 ]
+"20450
+[v _WPUC WPUC `VEuc  1 e 1 @3867 ]
+"20512
+[v _ANSELC ANSELC `VEuc  1 e 1 @3868 ]
+"20574
+[v _INLVLD INLVLD `VEuc  1 e 1 @3869 ]
+"20636
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @3870 ]
+"20698
+[v _ODCOND ODCOND `VEuc  1 e 1 @3871 ]
+"20760
+[v _WPUD WPUD `VEuc  1 e 1 @3872 ]
+"20822
+[v _ANSELD ANSELD `VEuc  1 e 1 @3873 ]
+"20947
+[v _INLVLE INLVLE `VEuc  1 e 1 @3877 ]
+"20985
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @3878 ]
+"21017
+[v _ODCONE ODCONE `VEuc  1 e 1 @3879 ]
+"21049
+[v _WPUE WPUE `VEuc  1 e 1 @3880 ]
+"21087
+[v _ANSELE ANSELE `VEuc  1 e 1 @3881 ]
+[s S1404 . 1 `uc 1 BIT 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 OPOL 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"24000
+[s S1411 . 1 `uc 1 MDBIT 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 MDOPOL 1 0 :1:4 
+`uc 1 MDOUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 MDEN 1 0 :1:7 
+]
+[u S1418 . 1 `S1404 1 . 1 0 `S1411 1 . 1 0 ]
+[v _MDCON0bits MDCON0bits `VES1418  1 e 1 @3916 ]
+[s S1436 . 1 `uc 1 CLSYNC 1 0 :1:0 
+`uc 1 CLPOL 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 CHSYNC 1 0 :1:4 
+`uc 1 CHPOL 1 0 :1:5 
+]
+"24066
+[s S1442 . 1 `uc 1 MDCLSYNC 1 0 :1:0 
+`uc 1 MDCLPOL 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 MDCHSYNC 1 0 :1:4 
+`uc 1 MDCHPOL 1 0 :1:5 
+]
+[u S1448 . 1 `S1436 1 . 1 0 `S1442 1 . 1 0 ]
+[v _MDCON1bits MDCON1bits `VES1448  1 e 1 @3917 ]
+"24111
+[v _MDSRC MDSRC `VEuc  1 e 1 @3918 ]
+"24191
+[v _MDCARL MDCARL `VEuc  1 e 1 @3919 ]
+"24259
+[v _MDCARH MDCARH `VEuc  1 e 1 @3920 ]
+"27485
+[v _LATA LATA `VEuc  1 e 1 @3970 ]
+"27547
+[v _LATB LATB `VEuc  1 e 1 @3971 ]
+"27609
+[v _LATC LATC `VEuc  1 e 1 @3972 ]
+"27671
+[v _LATD LATD `VEuc  1 e 1 @3973 ]
+"27733
+[v _LATE LATE `VEuc  1 e 1 @3974 ]
+[s S1576 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"27745
+[u S1580 . 1 `S1576 1 . 1 0 ]
+[v _LATEbits LATEbits `VES1580  1 e 1 @3974 ]
+"27765
+[v _TRISA TRISA `VEuc  1 e 1 @3975 ]
+"27887
+[v _TRISB TRISB `VEuc  1 e 1 @3976 ]
+"28009
+[v _TRISC TRISC `VEuc  1 e 1 @3977 ]
+"28131
+[v _TRISD TRISD `VEuc  1 e 1 @3978 ]
+"28253
+[v _TRISE TRISE `VEuc  1 e 1 @3979 ]
+"30486
+[v _PWM4DCL PWM4DCL `VEuc  1 e 1 @3999 ]
+"30552
+[v _PWM4DCH PWM4DCH `VEuc  1 e 1 @4000 ]
+"30722
+[v _PWM4CON PWM4CON `VEuc  1 e 1 @4001 ]
+"30785
+[v _PWM3DCL PWM3DCL `VEuc  1 e 1 @4002 ]
+"30851
+[v _PWM3DCH PWM3DCH `VEuc  1 e 1 @4003 ]
+"31021
+[v _PWM3CON PWM3CON `VEuc  1 e 1 @4004 ]
+[s S1249 . 1 `uc 1 C1TSEL 1 0 :2:0 
+`uc 1 C2TSEL 1 0 :2:2 
+`uc 1 P3TSEL 1 0 :2:4 
+`uc 1 P4TSEL 1 0 :2:6 
+]
+"31560
+[s S1254 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+`uc 1 C1TSEL1 1 0 :1:1 
+`uc 1 C2TSEL0 1 0 :1:2 
+`uc 1 C2TSEL1 1 0 :1:3 
+`uc 1 P3TSEL0 1 0 :1:4 
+`uc 1 P3TSEL1 1 0 :1:5 
+`uc 1 P4TSEL0 1 0 :1:6 
+`uc 1 P4TSEL1 1 0 :1:7 
+]
+[u S1263 . 1 `S1249 1 . 1 0 `S1254 1 . 1 0 ]
+[v _CCPTMRSbits CCPTMRSbits `VES1263  1 e 1 @4013 ]
+"32213
+[v _T4TMR T4TMR `VEuc  1 e 1 @4020 ]
+"32218
+[v _TMR4 TMR4 `VEuc  1 e 1 @4020 ]
+"32251
+[v _T4PR T4PR `VEuc  1 e 1 @4021 ]
+"32256
+[v _PR4 PR4 `VEuc  1 e 1 @4021 ]
+"32289
+[v _T4CON T4CON `VEuc  1 e 1 @4022 ]
+[s S776 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"32325
+[s S1130 . 1 `uc 1 T4OUTPS 1 0 :4:0 
+`uc 1 T4CKPS 1 0 :3:4 
+`uc 1 T4ON 1 0 :1:7 
+]
+[s S1134 . 1 `uc 1 T4OUTPS0 1 0 :1:0 
+`uc 1 T4OUTPS1 1 0 :1:1 
+`uc 1 T4OUTPS2 1 0 :1:2 
+`uc 1 T4OUTPS3 1 0 :1:3 
+`uc 1 T4CKPS0 1 0 :1:4 
+`uc 1 T4CKPS1 1 0 :1:5 
+`uc 1 T4CKPS2 1 0 :1:6 
+]
+[s S1142 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+`uc 1 TMR4ON 1 0 :1:7 
+]
+[u S1151 . 1 `S776 1 . 1 0 `S1130 1 . 1 0 `S1134 1 . 1 0 `S1142 1 . 1 0 ]
+[v _T4CONbits T4CONbits `VES1151  1 e 1 @4022 ]
+"32435
+[v _T4HLT T4HLT `VEuc  1 e 1 @4023 ]
+[s S666 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"32468
+[s S671 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S1027 . 1 `uc 1 T4MODE 1 0 :5:0 
+`uc 1 T4CKSYNC 1 0 :1:5 
+`uc 1 T4CKPOL 1 0 :1:6 
+`uc 1 T4PSYNC 1 0 :1:7 
+]
+[s S1032 . 1 `uc 1 T4MODE0 1 0 :1:0 
+`uc 1 T4MODE1 1 0 :1:1 
+`uc 1 T4MODE2 1 0 :1:2 
+`uc 1 T4MODE3 1 0 :1:3 
+`uc 1 T4MODE4 1 0 :1:4 
+]
+[u S1038 . 1 `S666 1 . 1 0 `S671 1 . 1 0 `S1027 1 . 1 0 `S1032 1 . 1 0 ]
+[v _T4HLTbits T4HLTbits `VES1038  1 e 1 @4023 ]
+"32563
+[v _T4CLKCON T4CLKCON `VEuc  1 e 1 @4024 ]
+"32721
+[v _T4RST T4RST `VEuc  1 e 1 @4025 ]
+[s S742 . 1 `uc 1 RSEL 1 0 :5:0 
+]
+"32746
+[s S744 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+]
+[s S1099 . 1 `uc 1 T4RSEL 1 0 :5:0 
+]
+[s S1101 . 1 `uc 1 T4RSEL0 1 0 :1:0 
+`uc 1 T4RSEL1 1 0 :1:1 
+`uc 1 T4RSEL2 1 0 :1:2 
+`uc 1 T4RSEL3 1 0 :1:3 
+]
+[u S1106 . 1 `S742 1 . 1 0 `S744 1 . 1 0 `S1099 1 . 1 0 `S1101 1 . 1 0 ]
+[v _T4RSTbits T4RSTbits `VES1106  1 e 1 @4025 ]
+"32801
+[v _T2TMR T2TMR `VEuc  1 e 1 @4026 ]
+"32806
+[v _TMR2 TMR2 `VEuc  1 e 1 @4026 ]
+"32839
+[v _T2PR T2PR `VEuc  1 e 1 @4027 ]
+"32844
+[v _PR2 PR2 `VEuc  1 e 1 @4027 ]
+"32877
+[v _T2CON T2CON `VEuc  1 e 1 @4028 ]
+"32913
+[s S780 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+"32913
+[s S784 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+]
+"32913
+[s S792 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+"32913
+[u S801 . 1 `S776 1 . 1 0 `S780 1 . 1 0 `S784 1 . 1 0 `S792 1 . 1 0 ]
+"32913
+"32913
+[v _T2CONbits T2CONbits `VES801  1 e 1 @4028 ]
+"33023
+[v _T2HLT T2HLT `VEuc  1 e 1 @4029 ]
+"33056
+"33056
+[s S677 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+"33056
+[s S682 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+"33056
+[u S688 . 1 `S666 1 . 1 0 `S671 1 . 1 0 `S677 1 . 1 0 `S682 1 . 1 0 ]
+"33056
+"33056
+[v _T2HLTbits T2HLTbits `VES688  1 e 1 @4029 ]
+"33151
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @4030 ]
+"33309
+[v _T2RST T2RST `VEuc  1 e 1 @4031 ]
+"33334
+"33334
+[s S749 . 1 `uc 1 T2RSEL 1 0 :5:0 
+]
+"33334
+[s S751 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+]
+"33334
+[u S756 . 1 `S742 1 . 1 0 `S744 1 . 1 0 `S749 1 . 1 0 `S751 1 . 1 0 ]
+"33334
+"33334
+[v _T2RSTbits T2RSTbits `VES756  1 e 1 @4031 ]
+"36170
+[v _TMR0L TMR0L `VEuc  1 e 1 @4050 ]
+"36308
+[v _TMR0H TMR0H `VEuc  1 e 1 @4051 ]
+"36562
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @4052 ]
+[s S909 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T016BIT 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+"36582
+[s S915 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+"36582
+[u S920 . 1 `S909 1 . 1 0 `S915 1 . 1 0 ]
+"36582
+"36582
+[v _T0CON0bits T0CON0bits `VES920  1 e 1 @4052 ]
+"36627
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @4053 ]
+[s S1680 . 1 `uc 1 T0CKPS 1 0 :4:0 
+`uc 1 T0ASYNC 1 0 :1:4 
+`uc 1 T0CS 1 0 :3:5 
+]
+"36658
+[s S1684 . 1 `uc 1 T0CKPS0 1 0 :1:0 
+`uc 1 T0CKPS1 1 0 :1:1 
+`uc 1 T0CKPS2 1 0 :1:2 
+`uc 1 T0CKPS3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS0 1 0 :1:5 
+`uc 1 T0CS1 1 0 :1:6 
+`uc 1 T0CS2 1 0 :1:7 
+]
+"36658
+[s S1693 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+`uc 1 T0PS3 1 0 :1:3 
+]
+"36658
+[s S1698 . 1 `uc 1 T0PS 1 0 :4:0 
+]
+"36658
+[u S1700 . 1 `S1680 1 . 1 0 `S1684 1 . 1 0 `S1693 1 . 1 0 `S1698 1 . 1 0 ]
+"36658
+"36658
+[v _T0CON1bits T0CON1bits `VES1700  1 e 1 @4053 ]
+[s S64 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"37512
+[s S72 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"37512
+[s S76 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+"37512
+[u S80 . 1 `S64 1 . 1 0 `S72 1 . 1 0 `S76 1 . 1 0 ]
+"37512
+"37512
+[v _INTCONbits INTCONbits `VES80  1 e 1 @4082 ]
+"54 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc1.c
+[v _clc1FirstRisingEdge clc1FirstRisingEdge `VEa  1 e 1 0 ]
+"55
+[v _clc1risingEdgeFlag clc1risingEdgeFlag `VEa  1 e 1 0 ]
+"54 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc5.c
+[v _clc5RisingEdgeFlag clc5RisingEdgeFlag `VEa  1 e 1 0 ]
+"54 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr0.c
+[v _timer0overflowFlag timer0overflowFlag `VEuc  1 e 1 0 ]
+"60
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.38(v  1 e 3 0 ]
+"61 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr4.c
+[v _TMR4_InterruptHandler TMR4_InterruptHandler `*.38(v  1 e 3 0 ]
+"51 D:\New folder\pic18f47q10-clc-ir-transmitter.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"86
+} 0
+"50 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"69
+} 0
+"67 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr4.c
+[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
+{
+"97
+} 0
+"181
+[v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR4_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 2 ]
+"183
+} 0
+"62 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"86
+} 0
+"62 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"86
+} 0
+"135
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 2 ]
+"137
+} 0
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/pwm4.c
+[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"85 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"99
+} 0
+"55 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"130
+} 0
+"71 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"52 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/dsm.c
+[v _DSM_Initialize DSM_Initialize `(v  1 e 1 0 ]
+{
+"88
+} 0
+"60 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc5.c
+[v _CLC5_Initialize CLC5_Initialize `(v  1 e 1 0 ]
+{
+"89
+} 0
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc4.c
+[v _CLC4_Initialize CLC4_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc3.c
+[v _CLC3_Initialize CLC3_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc2.c
+[v _CLC2_Initialize CLC2_Initialize `(v  1 e 1 0 ]
+{
+"83
+} 0
+"61 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc1.c
+[v _CLC1_Initialize CLC1_Initialize `(v  1 e 1 0 ]
+{
+"90
+} 0
+"37 D:\New folder\pic18f47q10-clc-ir-transmitter.X\application.c
+[v _ApplicationTask ApplicationTask `(v  1 e 1 0 ]
+{
+"43
+[v ApplicationTask@retStatus retStatus `uc  1 a 1 14 ]
+"38
+[v ApplicationTask@state state `E12881  1 s 1 state ]
+"39
+[v ApplicationTask@button button `E12898  1 s 1 button ]
+"40
+[v ApplicationTask@data data `ul  1 s 4 data ]
+"41
+[v ApplicationTask@command command `uc  1 s 1 command ]
+"42
+[v ApplicationTask@rxAddress rxAddress `uc  1 s 1 rxAddress ]
+"120
+} 0
+"217
+[v _SendIR_Frame SendIR_Frame `(E12888  1 s 1 SendIR_Frame ]
+{
+"223
+[v SendIR_Frame@retValue retValue `E12888  1 a 1 10 ]
+"217
+[v SendIR_Frame@IR_Data IR_Data `ul  1 p 4 3 ]
+[v SendIR_Frame@numOfBitsToSend numOfBitsToSend `uc  1 p 1 7 ]
+"219
+[v SendIR_Frame@logicState logicState `E12872  1 s 1 logicState ]
+"220
+[v SendIR_Frame@bitCounter bitCounter `uc  1 s 1 bitCounter ]
+"221
+[v SendIR_Frame@tempData tempData `ul  1 s 4 tempData ]
+"359
+} 0
+"110 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr0.c
+[v _TMR0_WriteTimer TMR0_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR0_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
+[v TMR0_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
+"113
+[v TMR0_WriteTimer@timerVal timerVal `uc  1 a 1 2 ]
+"114
+} 0
+"94
+[v _TMR0_StopTimer TMR0_StopTimer `(v  1 e 1 0 ]
+{
+"98
+} 0
+"88
+[v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
+{
+"92
+} 0
+"114 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/dsm.c
+[v _DSM_ModulationStop DSM_ModulationStop `(v  1 e 1 0 ]
+{
+"118
+} 0
+"108
+[v _DSM_ModulationStart DSM_ModulationStart `(v  1 e 1 0 ]
+{
+"112
+} 0
+"90
+[v _DSM_ManualModulationSet DSM_ManualModulationSet `(v  1 e 1 0 ]
+{
+"94
+} 0
+"96
+[v _DSM_ManualModulationClear DSM_ManualModulationClear `(v  1 e 1 0 ]
+{
+"100
+} 0
+"133 D:\New folder\pic18f47q10-clc-ir-transmitter.X\application.c
+[v _Reverse Reverse `(uc  1 s 1 Reverse ]
+{
+[v Reverse@byteVar byteVar `uc  1 a 1 wreg ]
+[v Reverse@byteVar byteVar `uc  1 a 1 wreg ]
+"135
+[v Reverse@byteVar byteVar `uc  1 a 1 4 ]
+"139
+} 0
+"182
+[v _Prepare_IR_NEC_Data Prepare_IR_NEC_Data `(ul  1 s 4 Prepare_IR_NEC_Data ]
+{
+[v Prepare_IR_NEC_Data@devAddress devAddress `uc  1 a 1 wreg ]
+"184
+[v Prepare_IR_NEC_Data@retData retData `ul  1 a 4 8 ]
+"182
+[v Prepare_IR_NEC_Data@devAddress devAddress `uc  1 a 1 wreg ]
+[v Prepare_IR_NEC_Data@cmd cmd `uc  1 p 1 2 ]
+[v Prepare_IR_NEC_Data@devAddress devAddress `uc  1 a 1 7 ]
+"194
+} 0
+"151
+[v _PrepareNewCMD PrepareNewCMD `(uc  1 s 1 PrepareNewCMD ]
+{
+[v PrepareNewCMD@swNum swNum `E12898  1 a 1 wreg ]
+"155
+[v PrepareNewCMD@newCommand newCommand `uc  1 a 1 3 ]
+"151
+[v PrepareNewCMD@swNum swNum `E12898  1 a 1 wreg ]
+"153
+[v PrepareNewCMD@sw1PressedIndex sw1PressedIndex `uc  1 s 1 sw1PressedIndex ]
+"155
+[v PrepareNewCMD@swNum swNum `E12898  1 a 1 2 ]
+"168
+} 0
+"371
+[v _GetEvent GetEvent `(E12892  1 s 1 GetEvent ]
+{
+"375
+} 0
+"403
+[v _GetButton GetButton `(E12898  1 s 1 GetButton ]
+{
+"406
+} 0
+"388
+[v _ClearEvent ClearEvent `(v  1 s 1 ClearEvent ]
+{
+"391
+} 0
+"419
+[v _ClearButton ClearButton `(v  1 s 1 ClearButton ]
+{
+"422
+} 0
+"58 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
+{
+"88
+} 0
+"168 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr4.c
+[v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
+{
+"178
+} 0
+"185
+[v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"190
+} 0
+"445 D:\New folder\pic18f47q10-clc-ir-transmitter.X\application.c
+[v _TMR4_UserInterruptHandler TMR4_UserInterruptHandler `(v  1 e 1 0 ]
+{
+"449
+} 0
+"122 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"132
+} 0
+"139
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"143
+} 0
+"432 D:\New folder\pic18f47q10-clc-ir-transmitter.X\application.c
+[v _TMR0_UserInterruptHandler TMR0_UserInterruptHandler `(v  1 e 1 0 ]
+{
+"435
+} 0
+"91 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc5.c
+[v _CLC5_ISR CLC5_ISR `(v  1 e 1 0 ]
+{
+"97
+} 0
+"92 D:\New folder\pic18f47q10-clc-ir-transmitter.X\mcc_generated_files/clc1.c
+[v _CLC1_ISR CLC1_ISR `(v  1 e 1 0 ]
+{
+"106
+} 0
