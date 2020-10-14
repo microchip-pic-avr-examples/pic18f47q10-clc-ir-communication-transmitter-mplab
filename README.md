@@ -115,7 +115,7 @@ The PWM3 peripheral along with Timer 2 is used for generating the 38 KHz carrier
 
 - [MPLAB X IDE v5.40](https://www.microchip.com/mplab/mplab-x-ide "MPLAB X IDE v5.40")
 - [XC8 Compiler v2.30](https://www.microchip.com/mplab/compilers "XC8 Compiler v2.20")
-- [MPLAB Code Configurator Core version 4.85](https://www.microchip.com/mplab/mplab-code-configurator "MPLAB Code Configurator Core version 4.85")
+- [MPLAB Code Configurator v4.0.2](https://www.microchip.com/mplab/mplab-code-configurator "MPLAB Code Configurator v4.0.2")
 - [PIC18F-Q_DFP v1.8.154](https://packs.download.microchip.com/ "PIC18F-Q_DFP v1.8.154")
 
 ***Note: For running the demo, the installed tool versions should be the same or later. This example is not tested with the previous versions.***
@@ -125,6 +125,7 @@ The PWM3 peripheral along with Timer 2 is used for generating the 38 KHz carrier
 - [PIC18F47Q10 Curiosity Nano](https://www.microchip.com/Developmenttools/ProductDetails/DM182029 "PIC18F47Q10 Curiosity Nano")
 - [Curiosity Nano Base for Click boards](https://www.microchip.com/developmenttools/ProductDetails/AC164162 "Curiosity Nano Base for Click boards")
 - [IR click]( https://www.mikroe.com/ir-click "IR click")
+- [LCD mini click](https://www.mikroe.com/lcd-mini-click "LCD mini click")
 
 ## MCC settings
 
@@ -210,16 +211,18 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 ## IR Transmitter
 
-* Connect IR Click board in mikroBUS™ slot 2 of the Curiosity Nano Base for click boards.
+* Connect IR Click board in mikroBUS™ slot 1 of the Curiosity Nano Base for click boards.
 * Other port pins used in the application are discribed in the below table.
 
-<p align="center">
-  <img width=auto height=auto src="images/.png">
-  <br>Table 1: Port pin mapping IR Transmitter <br>
-</p>
+|Sr.No| MCU Port pin #|Signal Description|IN/OUT| 
+|:---------:|:----------:|:----------:|:----------:|
+| 1 | RA3 | DSM OUT Connected to IR LED on IR_CLICK with PWM pin| OUT |
+| 2 | RE0 | LED on PIC18F47Q10 Curiosity Nano board | OUT |
+| 3 | RE2 | Switch SW1 on PIC18F47Q10 Curiosity Nano board | OUT |
+| 4 | RC5 | Timer 4 output pin is shorted to switch REO pin| OUT |
 
 <p align="center">
-  <img width=auto height=auto src="images/.png">
+  <img width=auto height=auto src="images/hardwaresetup.png">
   <br>Fig 14: Demo Set up Touch interface with IR TX <br>
 </p>
 
