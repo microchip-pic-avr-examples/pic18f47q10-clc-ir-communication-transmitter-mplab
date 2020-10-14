@@ -10,7 +10,7 @@ Many real time control applications use infrared (commonly referred to as IR) wi
 ### To see the IR Communication transmitter and receiver demo operation video, click on the below image.
 
 <p align="center">
-<br><a href="https://youtu.be/kxnTy4JSeoI" rel="nofollow"><img src="images/youtubefrontimagefrontimage.png" alt="PIC Q10 " width="500"/></a>
+<br><a href="https://youtu.be/kxnTy4JSeoI" rel="nofollow"><img src="images/youtubefrontimage.png" alt="PIC Q10 " width="500"/></a>
 </p>
 
 ## Useful Links
