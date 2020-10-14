@@ -213,6 +213,7 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 * Connect IR Click board in mikroBUS™ slot 1 of the Curiosity Nano Base for click boards.
 * Other port pins used in the application are discribed in the below table.
+* RC5 output of Timer 4 peripheral should be shorted to REO, which is connected to on board switch of the PIC18F47Q10 Curiosity Nano board. This is required because Timer peripheral is not having Port E.
 
 |Sr.No| MCU Port pin #|Signal Description|IN/OUT| 
 |:---------:|:----------:|:----------:|:----------:|
@@ -230,4 +231,4 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 ## Demo operation
 
-To complete the demo please visit IR Receiver xpress code example IR communication using Core Independent peripherals : IR Receiver.
+To complete the demo please visit IR Receiver xpress code example [IR Communication using Core Independent peripherals:IR Receiver-GitHub link](https://github.com/microchip-pic-avr-examples/pic18f47q10-clc-ir-communication-receiver-mplab.git "IR Communication using Core Independent peripherals:IR Receiver-GitHub link")
