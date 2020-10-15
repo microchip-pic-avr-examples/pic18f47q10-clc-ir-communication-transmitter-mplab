@@ -23,11 +23,11 @@ Many real time control applications use infrared (commonly referred to as IR) wi
 
 ## IR communication demo application
 
-This demo example explains how to implement IR communication seamlessly using Core Independent Peripherals (CIPs) of PIC18 Q10 microcontroller(MCU). In this demo, NEC Infrared transmission protocol is used for data encoding. The IR transmitter comprises of Configurable Logic Cells (CLCs), Pulse Width Modulator (PWM) and Data Signal Modulator (DSM) peripherals of PIC18 Q10 MCU, useful to prepare modulated data frame. The IR receiver comprises of Capture, Compare and PWM (CCP) module along with Timer 1 and Timer2(HLT) peripherals of PIC18F Q10 MCU, useful to decode the received data frame. The IR communication demo application consists of a transmitter and receiver units. These units are made up of Curiosity Nano Base for click boards from Microchip, IR Click and LCD mini click boards from MikroElekronika.
+This demo example explains how to implement IR communication seamlessly using Core Independent Peripherals (CIPs) of PIC18-Q10 microcontroller(MCU). In this demo, NEC Infrared transmission protocol is used for data encoding. The IR transmitter comprises of Configurable Logic Cells (CLCs), Pulse Width Modulator (PWM) and Data Signal Modulator (DSM) peripherals of PIC18-Q10 MCU, useful to prepare modulated data frame. The IR receiver comprises of Capture, Compare and PWM (CCP) module along with Timer 1 and Timer2(HLT) peripherals of PIC18-Q10 MCU, useful to decode the received data frame. The IR communication demo application consists of a transmitter and receiver units. These units are made up of Curiosity Nano Base for click boards from Microchip, IR Click and LCD mini click boards from MikroElekronika.
 
 ## IR Transmitter
 
-The IR transmitter unit is realized using the existing evaluation boards; Curiosity Nano Base for click boards and PIC18F47Q10 Curiosity Nano board from Microchip and IR click board from MikroElekronika. The push button or switche S1 on PIC18F47Q10 Curiosity Nano board are used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count i.e. from 1 to 8. After count 8 the commands are repeated i.e. command 1 to 8 for S1.
+The IR transmitter unit is realized using the existing evaluation boards; Curiosity Nano Base for click boards and PIC18F47Q10 Curiosity Nano board from Microchip and IR click board from MikroElekronika. The push button or switch S1 on PIC18F47Q10 Curiosity Nano board is used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count i.e. from 0x81 to 0x88. After count 8 the commands are repeated i.e. command 0x81 to 0x88 for S1.
 
 <p align="center">
   <img width=auto height=auto src="images/blockdiagram.png">
@@ -38,11 +38,11 @@ Following steps are followed for transmitting a command.
 
 #### Event Detection:
 
-* To detect the switch press and release event on pic18f47q10 curiosity nano board, and Timer 4 (for SW S1) are used and configured in monostable mode. Switches S1 is used as timer’s external reset source to start the timer. Upon Switch press or release event timers will start automatically. Timer’s period is set as 10 ms, to implement the switch de-bounce mechanism. The timer post-scaler is set as 1:2 to generate interrupt after switch press and release events
+* To detect the switch press and release event on pic18f47q10 curiosity nano board, Timer 4 (for SW S1) is used which is configured in monostable mode. Switch S1 is used as timer’s external reset source to start the timer. Upon Switch press or release event timers will start automatically. Timer’s period is set as 10 ms, to implement the switch de-bounce mechanism. The timer post-scaler is set as 1:2 to generate interrupt after switch press and release events
 
 #### Command generation from switch press and release event:
 
-* From the switch S1 press and release event, generate one byte of command to be transmitted (0x1 to 0x8).
+* From the switch S1 press and release event, generate one byte of command to be transmitted (0x81 to 0x88).
 * Reverse the bits in the command byte so that least significant bit (LSB) will be transmitted first as per NEC protocol.
 * Take the address of the receiver (e.g. 0x00) and reverse the bits for transmitting LSB first.
 * Generate a 32-bit data value (address, inverse of address, command, inverse of command) for transmission.
@@ -144,7 +144,7 @@ In the demo firmware the High-Frequency Internal Oscillator (HFINTOSC) is used t
 
 ## Timer 4 
 
-Timer 4 is configured in monostable mode to detect switch press and release event of switche S1 respectively. Switch S1 is used as timer reset source to start the Timer 4 as shown in the figure 5.
+Timer 4 is configured in monostable mode to detect switch press and release event of switch S1 respectively. Switch S1 is used as timer reset source to start the Timer 4 as shown in the figure 5.
 
 <p align="center">
   <img width=auto height=auto src="images/timer4.png">
