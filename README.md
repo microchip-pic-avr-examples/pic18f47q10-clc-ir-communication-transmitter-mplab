@@ -5,7 +5,7 @@
 
 ## Introduction
   
-Many real time control applications use infrared (commonly referred to as IR) wireless technology, as a communication mode. IR communication has the merits of consuming low power and is very cost effective.The IR communication is used in numerous control applications involving transmission of information and commands to control different house-hold appliances. Some commonly used home appliances which involve IR communication are the remote controls for television and air conditioners etc. There are various standard IR protocols in use such as S-link, RECS-80, RC-5, RC-6 and NEC. But the most commonly used protocol is NEC IR transmission protocol.
+Many real time control applications use infrared (commonly referred to as IR) wireless technology, as a communication mode. IR communication has the merits of consuming low power and is very cost effective.The IR communication is used in numerous control applications involving transmission of information and commands to control different house-hold appliances. Some commonly used home appliances which involve IR communication are the remote controls for television and air conditioners etc. There are various standard IR protocols in use such as S-link,RECS-80,RC-5, RC-6 and NEC. But the most commonly used protocol is NEC IR transmission protocol.
 
 ### To see the IR Communication transmitter and receiver demo operation video, click on the below image.
 
