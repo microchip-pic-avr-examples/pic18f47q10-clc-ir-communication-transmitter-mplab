@@ -27,7 +27,7 @@ This demo example explains how to implement IR communication seamlessly using Co
 
 ## IR Transmitter
 
-The IR transmitter unit is realized using the existing evaluation boards; Curiosity Nano Base for click boards and PIC18F47Q10 Curiosity Nano board from Microchip and IR click board from MikroElekronika. The push button or switch S1 on PIC18F47Q10 Curiosity Nano board is used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count i.e. from 0x81 to 0x88. After count 8 the commands are repeated i.e. command 0x81 to 0x88 for S1.
+The IR transmitter unit is realized using the existing evaluation boards; Curiosity Nano Base for click boards and PIC18F47Q10 Curiosity Nano board from Microchip and IR click board from MikroElekronika. The push button or switch S1 on PIC18F47Q10 Curiosity Nano board is used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count plus 0x08 i.e. from 0x81 to 0x88. After count 8 the commands are repeated i.e. command 0x81 to 0x88 for S1.
 
 <p align="center">
   <img width=auto height=auto src="images/blockdiagram.png">
@@ -38,7 +38,7 @@ Following steps are followed for transmitting a command.
 
 #### Event Detection:
 
-* To detect the switch press and release event on pic18f47q10 curiosity nano board, Timer 4 (for SW S1) is used which is configured in monostable mode. Switch S1 is used as timer’s external reset source to start the timer. Upon Switch press or release event timers will start automatically. Timer’s period is set as 10 ms, to implement the switch de-bounce mechanism. The timer post-scaler is set as 1:2 to generate interrupt after switch press and release events
+* To detect the switch press and release event on pic18f47q10 curiosity nano board, Timer 4 is used which is configured in monostable mode. Switch S1 is used as timer’s external reset source to start the timer. Upon Switch press or release event timer will start automatically. Timer period is set as 10 ms, to implement the switch de-bounce mechanism. The timer post-scaler is set as 1:2 to generate interrupt after switch press and release events
 
 #### Command generation from switch press and release event:
 
@@ -67,7 +67,7 @@ Following steps are followed for transmitting a command.
 
 <p align="center">
   <img width=auto height=auto src="images/blockdiagram1.png">
-  <br>Fig 2: CLC Configuration to Transmit '1' <br>
+  <br>Figure 2: CLC Configuration to Transmit '1' <br>
 </p>
 
 1. CLC1, CLC2 and CLC3 are configured as D flip-flops.
@@ -82,7 +82,7 @@ Following steps are followed for transmitting a command.
 
 <p align="center">
   <img width=auto height=auto src="images/blockdiagram2.png">
-  <br>Fig 3: CLC Configuration to Transmit '0' <br>
+  <br>Figure 3: CLC Configuration to Transmit '0' <br>
 </p>
 
 1. CLC5 is configured as D flip-flop and the output of CLC5 is negated.
@@ -139,7 +139,7 @@ In the demo firmware the High-Frequency Internal Oscillator (HFINTOSC) is used t
 
 <p align="center">
   <img width=auto height=auto src="images/clock.png">
-  <br>Fig 4: System Clock Configuration <br>
+  <br>Figure 4: System Clock Configuration <br>
 </p>
 
 ## Timer 4 
@@ -148,7 +148,7 @@ Timer 4 is configured in monostable mode to detect switch press and release even
 
 <p align="center">
   <img width=auto height=auto src="images/timer4.png">
-  <br>Fig 5: Timer 4 configuration <br>
+  <br>Figure 5: Timer 4 configuration <br>
 </p>
 
 ## CLC
@@ -157,27 +157,27 @@ CLC1, CLC2, CLC3 and CLC4 are configured together for generating and transmittin
 
 <p align="center">
   <img width=auto height=auto src="images/clc1.png">
-  <br>Fig 6: CLC1 Configuration <br>
+  <br>Figure 6: CLC1 Configuration <br>
 </p>
 
 <p align="center">
   <img width=auto height=auto src="images/clc2.png">
-  <br>Fig 7: CLC2 Configuration <br>
+  <br>Figure 7: CLC2 Configuration <br>
 </p>
 
 <p align="center">
   <img width=auto height=auto src="images/clc3.png">
-  <br>Fig 8: CLC3 Configuration <br>
+  <br>Figure 8: CLC3 Configuration <br>
 </p>
 
 <p align="center">
   <img width=auto height=auto src="images/clc4.png">
-  <br>Fig 9: CLC4 Configuration <br>
+  <br>Figure 9: CLC4 Configuration <br>
 </p>
 
 <p align="center">
   <img width=auto height=auto src="images/clc5.png">
-  <br>Fig 10: CLC5 Configuration <br>
+  <br>Figure 10: CLC5 Configuration <br>
 </p>
 
 ## Timer 2
@@ -186,7 +186,7 @@ The PWM3 peripheral along with the Timer 2 is used for generating 38 KHz carrier
 
 <p align="center">
   <img width=auto height=auto src="images/timer2.png">
-  <br>Fig 6: CLC1 Configuration <br>
+  <br>Figure 11: Timer 2 Configuration <br>
 </p>
 
 ## PWM3 and PWM4
@@ -195,7 +195,7 @@ Configuration of PWM3 and PWM4 peripherals is shown in the below figure. Duty cy
 
 <p align="center">
   <img width=auto height=auto src="images/pwm.png">
-  <br>Fig 12: PWM3, PWM4 Configuration <br>
+  <br>Figure 12: PWM3, PWM4 Configuration <br>
 </p>
 
 ## DSM
@@ -204,7 +204,7 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 <p align="center">
   <img width=auto height=auto src="images/dsm.png">
-  <br>Fig 13: DSM Configuration <br>
+  <br>Figure 13: DSM Configuration <br>
 </p>
 
 ## Hardware setup
@@ -213,7 +213,7 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 * Connect IR Click board in mikroBUS™ slot 1 of the Curiosity Nano Base for click boards.
 * Other port pins used in the application are discribed in the below table.
-* RC5 output of Timer 4 peripheral should be shorted to REO, which is connected to on board switch of the PIC18F47Q10 Curiosity Nano board. This is required because Timer peripheral is not having Port E.
+* RC5 output of Timer 4 peripheral should be shorted to RE2, which is connected to on board switch of the PIC18F47Q10 Curiosity Nano board. This is required because Timer peripheral is not having Port E.
 
 |Sr.No| MCU Port pin #|Signal Description|IN/OUT| 
 |:---------:|:----------:|:----------:|:----------:|
@@ -224,7 +224,7 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 <p align="center">
   <img width=auto height=auto src="images/hardwaresetup.png">
-  <br>Fig 14: Demo Set up Touch interface with IR TX <br>
+  <br>Figure 14: Demo Set up Touch interface with IR TX <br>
 </p>
 
 * After making the hardware connections as shown in the above figure, power on the board with micro USB cable.Build demo firmware and load the generated hex file to the PIC18F47Q10 MCU.
