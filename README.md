@@ -27,7 +27,7 @@ This demo example explains how to implement IR communication seamlessly using Co
 
 ## IR Transmitter
 
-The IR transmitter unit is realized using the existing evaluation boards; Curiosity Nano Base for click boards and PIC18F47Q10 Curiosity Nano board from Microchip and IR click board from MikroElekronika. The push button or switch S1 on PIC18F47Q10 Curiosity Nano board is used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count plus 0x08 i.e. from 0x81 to 0x88. After count 8 the commands are repeated i.e. command 0x81 to 0x88 for S1.
+The IR transmitter unit is realized using the existing evaluation boards; Curiosity Nano Base for click boards and PIC18F47Q10 Curiosity Nano board from Microchip and IR click board from MikroElekronika. The push button or switch S1 on PIC18F47Q10 Curiosity Nano board is used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count plus 0x80 i.e. from 0x81 to 0x88. After count 8 the commands are repeated i.e. command 0x81 to 0x88 for S1.
 
 <p align="center">
   <img width=auto height=auto src="images/blockdiagram.png">
@@ -144,7 +144,7 @@ In the demo firmware the High-Frequency Internal Oscillator (HFINTOSC) is used t
 
 ## Timer 4 
 
-Timer 4 is configured in monostable mode to detect switch press and release event of switch S1 respectively. Switch S1 is used as timer reset source to start the Timer 4 as shown in the figure 5.
+Timer 4 is configured in monostable mode to detect switch press and release event of switch S1. Switch S1 is used as timer reset source to start the Timer 4 as shown in the figure 5.
 
 <p align="center">
   <img width=auto height=auto src="images/timer4.png">
