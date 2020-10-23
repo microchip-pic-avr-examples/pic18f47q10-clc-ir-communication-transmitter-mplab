@@ -213,7 +213,8 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 * Connect IR Click board in mikroBUS™ slot 1 of the Curiosity Nano Base for click boards.
 * Other port pins used in the application are discribed in the below table.
-* RC5 output of Timer 4 peripheral should be shorted to RE2, which is connected to on board switch of the PIC18F47Q10 Curiosity Nano board. This is required because Timer peripheral is not having Port E.
+* Switch S1 is connected to RE2. Timer 4 peripheral's RESET pin cannot use port E, hence RC5 is used as Timer  4 reset pin. Short RC5 pin to RE2 pin.
+ 
 
 |Sr.No| MCU Port pin #|Signal Description|IN/OUT| 
 |:---------:|:----------:|:----------:|:----------:|
