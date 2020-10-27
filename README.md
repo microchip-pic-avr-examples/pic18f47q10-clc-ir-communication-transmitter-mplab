@@ -27,7 +27,7 @@ This demo example explains how to implement IR communication seamlessly using Co
 
 ## IR Transmitter
 
-The IR transmitter unit is realized using the existing evaluation boards; Curiosity Nano Base for click boards and PIC18F47Q10 Curiosity Nano board from Microchip and IR click board from MikroElekronika. The push button or switch S1 on PIC18F47Q10 Curiosity Nano board is used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count plus 0x80 i.e. from 0x81 to 0x88. After count 8 the commands are repeated i.e. command 0x81 to 0x88 for S1.
+The IR transmitter unit is realized using the existing evaluation boards; Curiosity Nano Base for click boards and PIC18F47Q10 Curiosity Nano board from Microchip and IR click board from MikroElekronika. The push button or switch S1 on PIC18F47Q10 Curiosity Nano board is used for generating commands. The switch press and release events are monitored using HLT modules of the MCU. The transmitter unit send a specific command to the receiver unit/board after each switch release event. If switch S1 is pressed, command is transmitted as switch press count plus 0x80 i.e. from 0x81 to 0x88. After count 8 the commands are repeated i.e. command 0x81 to 0x88 for each switch (S1) press event.
 
 <p align="center">
   <img width=auto height=auto src="images/blockdiagram.png">
@@ -38,11 +38,11 @@ Following steps are followed for transmitting a command.
 
 #### Event Detection:
 
-* To detect the switch press and release event on pic18f47q10 curiosity nano board, Timer 4 is used which is configured in monostable mode. Switch S1 is used as timer’s external reset source to start the timer. Upon Switch press or release event timer will start automatically. Timer period is set as 10 ms, to implement the switch de-bounce mechanism. The timer post-scaler is set as 1:2 to generate interrupt after switch press and release events
+* To detect the switch press and release event on pic18f47q10 curiosity nano board, Timer 4 is used which is configured in monostable mode. Switch S1 is used as timer’s external reset source to start the timer. Upon Switch press or release event timer will start automatically. Timer period is set as 10 ms, to implement the switch de-bounce mechanism. The timer post-scaler is set as 1:2 to generate interrupt after switch press and release events.
 
 #### Command generation from switch press and release event:
 
-* From the switch S1 press and release event, generate one byte of command to be transmitted (0x81 to 0x88).
+* From the switch S1 press and release events, generate one byte of command to be transmitted (0x81 to 0x88).
 * Reverse the bits in the command byte so that least significant bit (LSB) will be transmitted first as per NEC protocol.
 * Take the address of the receiver (e.g. 0x00) and reverse the bits for transmitting LSB first.
 * Generate a 32-bit data value (address, inverse of address, command, inverse of command) for transmission.
@@ -153,7 +153,7 @@ Timer 4 is configured in monostable mode to detect switch press and release even
 
 ## CLC
 
-CLC1, CLC2, CLC3 and CLC4 are configured together for generating and transmitting the IR data bit as logic 1. CLC5 is configured for generating and transmitting the IR data bit as logic 0. The CLCs are configured as shown in figures 6,7,8,9,10.
+CLC1, CLC2, CLC3 and CLC4 are configured together for generating and transmitting the IR data bit as logic 1. CLC5 is configured for generating and transmitting the IR data bit as logic 0. The CLCs are configured as shown in figures 6,7,8,9 and 10.
 
 <p align="center">
   <img width=auto height=auto src="images/clc1.png">
@@ -211,9 +211,9 @@ The DSM along with PWM3 and PWM4 modules generate the modulated data frame. The 
 
 ## IR Transmitter
 
-* Connect IR Click board in mikroBUS™ slot 1 of the Curiosity Nano Base for click boards.
+* Insert IR Click board in mikroBUS™ slot 1 of the Curiosity Nano Base for click boards.
 * Other port pins used in the application are discribed in the below table.
-* Switch S1 is connected to RE2. Timer 4 peripheral's RESET pin cannot use port E, hence RC5 is used as Timer  4 reset pin. Short RC5 pin to RE2 pin.
+* Switch S1 is connected to RE2. Timer 4 peripheral's RESET pin cannot use port E, hence RC5 is used as Timer  4 reset pin. Short pins RC5 and RE2 of microcontroller on the board using jumper wire.
  
 
 |Sr.No| MCU Port pin #|Signal Description|IN/OUT| 
