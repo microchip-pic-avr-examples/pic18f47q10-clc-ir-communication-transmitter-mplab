@@ -53,7 +53,7 @@ Following steps are followed for transmitting a command.
 
 #### Transmit Start:
 
-* For the first overflow, set the DSM modulation source bit to high so that the 38 KHz PWM signal connected to carrier high of the DSM is output on Tx pin for start sequence of 9 ms. Timer 0 will overflow for two times so that the pulse burst of 38 KHz is transmitted for 9 ms (Mark from the start sequence).
+* For the first overflow, set the DSM modulation source bit to high so that the 38 kHz PWM signal connected to carrier high of the DSM is output on Tx pin for start sequence of 9 ms. Timer 0 will overflow for two times so that the pulse burst of 38 kHz is transmitted for 9 ms (Mark from the start sequence).
 * Set the DSM modulation source bit as low and wait for one more timer 0 overflow so that PWM with 0% duty equivalent to the logic 0 connected to carrier low of the DSM is transmitted for 4.5 ms (Space from the start sequence) which completes the start pulse.
 
 #### Transmit 32-bit data(IR receiver address, inverse of address, command and inverse of command):
@@ -109,7 +109,7 @@ Following steps are followed for transmitting a command.
 
 #### Modulation:
 
-The PWM3 peripheral along with Timer 2 is used for generating the 38 KHz carrier signal. Whenever the modulating signal is high, the 38 kHz output of the PWM3 module connected to the carrier high signal of a DSM is routed to the DSM output. Whenever the modulating signal is low, the carrier low signal of DSM module is routed to the DSM output. Since the PWM4 module is configured as 0% duty to give equivalent signal as ground, the carrier low signal generates logic low output. The modulated signal from the DSM module output is fed to the IR click’s IR LED for transmitting a command.  
+The PWM3 peripheral along with Timer 2 is used for generating the 38 kHz carrier signal. Whenever the modulating signal is high, the 38 kHz output of the PWM3 module connected to the carrier high signal of a DSM is routed to the DSM output. Whenever the modulating signal is low, the carrier low signal of DSM module is routed to the DSM output. Since the PWM4 module is configured as 0% duty to give equivalent signal as ground, the carrier low signal generates logic low output. The modulated signal from the DSM module output is fed to the IR click’s IR LED for transmitting a command.  
 
 ## Software  Tools
 
@@ -182,7 +182,7 @@ CLC1, CLC2, CLC3 and CLC4 are configured together for generating and transmittin
 
 ## Timer 2
 
-The PWM3 peripheral along with the Timer 2 is used for generating 38 KHz carrier signal. The Timer 2 configuration in shown in figure 11.
+The PWM3 peripheral along with the Timer 2 is used for generating 38 kHz carrier signal. The Timer 2 configuration in shown in figure 11.
 
 <p align="center">
   <img width=auto height=auto src="images/timer2.png">
